@@ -12,7 +12,7 @@
 	}
 	const sorted = Object.keys(swimmersAll)
 		.sort((a, b) => swimmersAll[b] - swimmersAll[a])
-		.map((sw) => `${swimmersAll[sw]} - ${sw}`)
+		.map((sw) => sw + ',' + swimmersAll[sw])
 		.join("\n");
-	console.log(`Sorted by points\n----------------\n` + sorted);
+	console.log(`Swimmer,Points\n` + sorted);
 })();
